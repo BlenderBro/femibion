@@ -1,11 +1,11 @@
 {
      "android": {
-         "release": {
-             "keystore": "",
-             "storePassword": "",
-             "alias": "",
-             "password" : "",
-             "keystoreType": ""
-         }
+      "release": {
+        "keystore": "F:\\Firma\\Projects\\femibion\\femibion.keystore",
+        "storePassword": "123456",
+        "alias": "femibion",
+        "password": "123456",
+        "keystoreType": ""
+      }
      }
  }

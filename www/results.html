@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Rezultate</title>
+</head>
+<body class="cover">
+    <script>
+        //  TODO: Move this to index.js
+        document.addEventListener("DOMContentLoaded", function (event) {
+            console.log(sessionStorage.suma);
+            let button = document.getElementById('back');
+            back.addEventListener('click', function () {
+                window.location = 'index.html';
+            })
+        });
+    </script>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-5 vert align-content-center">
+                <div class="card text-center">                    
+                    <div class="card-body">
+                        <h1 class="card-title">Rezultat</h1>
+                        <h4 class="card-text">--Nume Rezultat--</h4>
+                        <a id="back" href="#" class="btn btn-lg btn-danger">Inapoi la Chestionar</a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

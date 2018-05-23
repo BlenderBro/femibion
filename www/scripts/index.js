@@ -4,25 +4,42 @@
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
     "use strict";
+
     //get all buttons
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
     const target = document.querySelectorAll('.select');
     const calc = document.getElementById('logo-cont');
+    const vals = [];
     //loop trough buttons and listen for clicks
     for (let i = 0; i < target.length; i++) {
         target[i].addEventListener('click', function () {
             target[i].classList.toggle('selected');
-            console.log(target[i].getAttribute('value'));
+            vals.push(target[i].getAttribute('value'));
         }, false);
     }
 
-    calc.addEventListener('click', function () {
-        const selected = document.querySelectorAll('selected')
-        for (let i = 0; i < selected.length; i++) {
+    /*
+    * Logo click event and array sum
+    * @returns redirect to results with value:string
+    */
 
-            console.log(selected.getAttribute('value'));
+    calc.addEventListener('click', function () {
+        for (let i = 0; i < vals.length; i++) {
+            vals[i] = parseInt(vals[i]);
         }
+        let suma = vals.reduce(add, 0);
+        sessionStorage.suma = suma;
+        window.location = "results.html"
+        //return suma;
+        console.log(suma);        
     })
+
+    /*
+    * Simple adding function
+    */
+    function add(a, b) {
+        return a + b;
+    }
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
